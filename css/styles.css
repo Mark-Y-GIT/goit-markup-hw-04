@@ -412,7 +412,12 @@ header .logo {
 }
 
 .bg-image {
-  background-image: url(../images/hero.jpg);
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero.jpg);
   background-repeat: no-repeat;
   max-width: 1600px;
   background-size: cover;
@@ -534,8 +539,22 @@ header .logo {
   fill: var(--dark-bg-text-color);
 }
 
+.clients-section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
 .clients-container {
   text-align: center;
+}
+
+.clients-main-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  color: var(--title-color);
+  margin-bottom: 50px;
 }
 
 .clients-icon-link {
@@ -549,7 +568,24 @@ header .logo {
 }
 .clients-icon {
   display: inline-flex;
+  margin-top: -30px;
+  margin-left: -30px;
 }
 
-.clients-icon-link .icon {
+.clients-icon-item {
+  margin-left: 30px;
+  margin-top: 30px;
+}
+.clients-icon-item .icon {
+  fill: var(--icons-color);
+}
+
+.clients-icon-link:hover,
+.clients-icon-link:focus {
+  border-color: var(--accent-color);
+}
+
+.clients-icon-link:hover .icon,
+.clients-icon-link:focus .icon {
+  fill: var(--accent-color);
 }
